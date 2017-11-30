@@ -1,0 +1,74 @@
+@import
+	url('https://fonts.googleapis.com/css?family=Amaranth|Changa+One|Comfortaa|Concert+One|Merriweather|Rozha+One')
+	;
+
+.bg {
+	width: 100%;
+	height: 100vh;
+	color: #fff;
+	font-family: 'Comfortaa', cursive;	
+}
+.bg .row{
+	height: 100vh;
+}
+.form-container {
+	border: 0px solid #fff;
+	padding: 40px 30px;
+	margin-top: 20vh;
+	box-shadow: 1px 1px 15px 3px rgba(0,0,0,0.75);
+	background-color: #007bff;
+}
+
+.bg h1 {
+	text-align: center;
+}
+.bg input[type]:focus {
+   background: rgba(0,0,0,0.40);
+    color: #FFF;
+}
+.bg a:hover{
+	color: #660066;
+}
+.bg .btn {
+	border-radius: 5px;
+	position: relative;
+	width: 50%;
+	margin-left: 25%;
+}
+.bg .btn::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 0;
+	background: rgba(0, 0, 0, 0.32);
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: all 0.3s;
+	content: '';
+	position: absolute;
+}
+
+.bg .btn:hover:before {
+	height: 100%;
+	z-index: 2;
+}
+.bg a{
+	color: #ff9933;
+}
+.bg .forms{
+	padding: 0;
+}
+.bg .about h1,p{
+	text-align: center;
+	padding-top: 30px;
+	color: #649DAD;
+}
+/* jquery */
+@media (max-width: 576px)
+{
+	.bg .form-container
+	{
+		margin-top: 0;
+	}
+}

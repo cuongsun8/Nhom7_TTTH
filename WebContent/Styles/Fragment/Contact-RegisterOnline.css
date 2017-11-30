@@ -1,0 +1,109 @@
+@import
+	url('https://fonts.googleapis.com/css?family=Amaranth|Changa+One|Comfortaa|Concert+One|Merriweather|Rozha+One');
+.dang-ky-online{
+	background: url('/TrungTamTinHoc/Assets/Images/btn-dang-ky-right.png') no-repeat;
+	background-size: cover;
+	width: 42px;
+	height: 175px;
+	position: fixed;
+	top: 290px;
+	right: 0px;
+	cursor: pointer;
+	z-index: 1001;
+}
+.form-parent {
+	width: 353px;
+	height: auto;
+	background: transparent
+		url('/TrungTamTinHoc/Assets/Images/blue-contact.png')
+		no-repeat left 10px;
+	position: fixed;
+	bottom: 0px;
+	right: -305px;
+	z-index: 9999999;
+	transition: all ease .6s;
+	-moz-transition: all ease .6s;
+	-webkit-transition: all ease .6s;
+	-o-transition: all ease .6s;
+	font-family: 'Comfortaa', cursive;
+	z-index: 1000;
+	cursor: pointer;
+}
+
+/* .form-parent:hover {
+	right: 0;
+} */
+
+.float-form {
+	background: #fff;
+	color: #007bff;
+	padding: 10px;
+	width: 300px;
+	border: 1px solid #bfbfbf;
+	border-radius: 5px;
+	margin-left: 50px;
+
+}
+
+#ContactForm1 {
+	display: none;
+}
+.contact-form-area {
+	background: #fff;
+	width: 278px;
+	padding: 5px 0px;
+	font-family: Verdana, Geneva, sans-serif;
+	color: black;
+	font-size: 16px;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+}
+
+#quater {
+	float: right;
+	font-size: 9px;
+	margin-top: -10px;
+	color: #777;
+}
+
+#quater a {
+	color: #777;
+	text-decoration: none;
+}
+.contact-form-button{
+	border-radius: 4px;
+	background: #007bff;
+	width: 80px;
+	height: 30px;
+	color: #fff;
+}
+.contact-form-button:hover{
+	background: #FD6504 !important;
+}
+.tieu-de-feedback{
+	color: #fff;
+	display: block;
+	padding: 10px;
+	width: 298px;
+	background: #FD6504;
+	text-align: center;
+	border-radius: 3px 3px 0 0;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+.scroll-btn{
+	color: #337ab7;
+   	text-decoration: none;
+   	right: 2px;
+   	bottom: 2px;
+   	position: fixed;
+   	z-index: 1001;
+}
+.t-trang-chu {
+    font-size: 20px;
+    color: #FFF;
+    background-color: #0082c8;
+    border: 1px solid #FFF;
+    padding: 8px;
+    border-radius: 5px;
+}

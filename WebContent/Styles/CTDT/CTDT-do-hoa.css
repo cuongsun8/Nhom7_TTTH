@@ -1,0 +1,77 @@
+.dash {
+	border-top: 1px dashed #8c8b8b;
+	margin-top: 7px;
+	margin-bottom: 5px;
+}
+
+.text span {
+	color: #ff0000;
+}
+
+.direct {
+	padding-top: 90px;
+}
+
+.nav-tabs {
+	width: 22vw;
+	margin: auto;
+}
+
+.news {
+	height: 100%;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.faculty p {
+	margin: 0;
+}
+
+.xem-lich p {
+	text-align: right;
+}
+
+.xem-lich a {
+	color: #ff0000;
+}
+
+.tab-content {
+	width: 100%;
+}
+
+.tab-pane {
+	wwidth: 50%;
+}
+
+.tab-pane img {
+	width: 45%;
+	height: 45%;
+}
+
+.tab-pane a {
+	padding: 3px 0px;
+}
+
+.tab-title {
+	width: 100%;
+	text-align: center;
+}
+
+.caption {
+	padding-left: 3px;
+	display: block;
+	font-size: 0.8rem;
+	background: #0082c8;
+	color: #fff;
+	line-height: 1.3rem;
+}
+
+.tab-pane a {
+	position: relative;
+}
+.nav-tabs .nav-item:active{
+	border-bottom: 2px solid #0082c8;
+}

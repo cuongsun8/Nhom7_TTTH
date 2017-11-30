@@ -1,0 +1,125 @@
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+.none-box-shadow:focus, .none-box-shadow:active {
+    box-shadow: none;
+}
+.header-logo {
+	position: relative;
+	padding: 15px;
+}
+
+.header .searchbar {
+	position: absolute;
+	width: 30%;
+	bottom: 15px;
+	right: 0;
+}
+
+.navbar-brand {
+	font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
+}
+.megamenu {
+	width: 40vw;
+	position: absolute;
+	display: none;
+	z-index: 1071;
+	
+}
+.link-list {
+	list-style-type: none;
+	background: #fff;
+}
+.link-list li{
+	padding-top: 2px;
+}
+.link-list a{
+	color: #666666;
+}
+.menu-title {
+	position: relative;
+	color: #fff;
+}
+.menu-title:hover {
+	border-left: solid 0.5px #fff;
+	border-right: solid 0.5px #fff;
+}
+
+.lich-khai-giang:hover .megamenu {
+	display: block;
+}
+.megamenu .link-list {
+	width: 50%;
+}
+.megamenu .row{
+	width: 100%;
+	margin-left: 0;
+}
+.link-list li a {
+	text-decoration: none;
+	font-size: 0.95rem;
+}
+
+.link-list li a:hover {
+	color: red;
+}
+.submenu-text {
+	display: inline-block;
+}
+
+.icon-khai-giang {
+	font-size: 2.1rem;
+}
+.CTDT-menu{
+	position: absolute;
+	width: 25vw;
+	display: none;
+	z-index: 1071;
+}
+.CTDT-menu .link-list{
+	padding-left: 0;
+}
+
+.CTDT:hover .CTDT-menu{
+	display: block;
+}
+.CTDT .link-list li:hover{
+	background: #eee;
+}
+.CTDT .link-list li:hover a{
+	color: red;
+}
+.dichvu-menu {
+	position: absolute;
+	width: 27vw;
+	display: none;
+	z-index: 1071;
+}
+.dichvu-menu .link-list{
+	padding-left: 0;
+}
+.dich-vu:hover .dichvu-menu{
+	display: block;
+}
+.dich-vu .link-list li:hover{
+	background: #eee;
+}
+.dich-vu .link-list li:hover a{
+	color: red;
+}
+@media(min-width: 1140px){
+	.dang-nhap{
+		right: -30%;
+	}
+}
+@media (max-width: 768px){
+	.megamenu{width: 90vw;}
+	.CTDT-menu{width: 90vw}
+	.dichvu-menu{width: 90vw;}
+}

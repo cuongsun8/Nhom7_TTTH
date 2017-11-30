@@ -1,0 +1,196 @@
+.thong-tin-hoc-vien {
+    background: url(/TrungTamTinHoc/Assets/Images/FormDangKy/thong-tin-background-xuan.jpg) no-repeat;
+    background-size: cover;
+    padding: 2% 5%;
+    width: 90vw;
+    margin: 5px auto;
+    
+    display: none;
+}
+.thong-tin-hoc-vien .form-dang-ky {
+    background: url(/TrungTamTinHoc/Assets/Images/FormDangKy/background-mo.png);
+}
+.mg10 {
+    margin: 10px 0;
+}
+.thong-tin-hoc-vien .tieu-de{
+	margin: 25px 0 10px;
+    color: #ff6633;
+    text-align: center;
+    width: 100%;
+}
+.form-dang-ky .form-group {
+    margin-bottom: 25px;
+}
+.hotline {
+    background-color: #26a8d3;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.9em;
+    line-height: 150%;
+    margin-bottom: 20px;
+}
+@media (min-width: 992px){
+	.form-feild {
+	    width: 75%;
+	}
+}
+@media (max-width: 576px){
+	.form-feild {
+	    width: 100%;
+	}
+}
+.hoantat {
+    display: block;
+    background-color: #ff6600;
+    width: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px auto;
+}
+.hoantat:hover{
+	background-color: #26a8d3;
+}
+.countdown-container{
+	overflow: hidden;
+	width: 100%;
+}
+.form-group .control-label{
+	font-weight: bold;
+}
+.time_circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.time_circles > div {
+    position: absolute;
+    text-align: center;
+}
+.time_circles > div > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Century Gothic', Arial;
+    font-size: 300%;
+    margin-top: 0.3em;
+    font-weight: bold;
+}
+.time_circles > div > h4 {
+    margin: 15px 0px 0px;
+    padding: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, 'Century Gothic';
+}
+.monhoc {
+	width: 100%;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 15px;
+}
+.monhoc label{
+    font-size: 17px;
+    margin: 5px 0;
+    text-align: right;
+}
+.arrowchon{
+    margin-left: 10px;
+    margin-bottom: 5px;
+    height: 35px;
+    transform: rotate(180deg);
+    position: relative;
+    left: 0px;
+    animation: Hieu_ung 0.5s 0.5s infinite linear forwards;
+}
+@keyframes Hieu_ung{
+	0% {
+	    left: 0px;
+	}
+	50% {
+	    left: 10px;
+	}
+	100% {
+	    left: 20px;
+	}
+}
+.combo-group{
+	width: 90vw;
+	margin: 10px auto;
+}
+#chon-mon{
+	display: none;
+}
+.monhoc select {
+    max-width: 80%;
+    padding: 5px;
+    margin-top: 8px;
+    display: inline-block;
+}
+.chonlich {
+    font-size: 1.2em;
+    color: #ff6633;
+    padding: 10px 0 5px 7px;
+}
+#chon-lich{
+	display: none;
+}
+#chon-lich input[type=radio], input[type='checkbox'] {
+    display: none;
+}
+.tkb .lich-check{
+	color: rgb(255, 102, 51);
+}
+.lichhoc label {
+    cursor: pointer;
+}
+.lichhoc label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.lblLich > div{
+	font-weight: bold;
+	margin-left: 26px;
+	line-height: 20px;
+	cursor: pointer;
+}
+@media(max-width: 768px){
+	.arrowchon{
+		display: none;
+	}
+	.hotline{
+		display: none;
+	}
+}
+@media(min-width: 768px){
+	.popover {
+	  border-color: tomato; 
+	}
+	.popover .arrow:after {
+	    border-color: tomato;
+	}
+}
+@media(max-width: 576px){
+	.monhoc > label{
+		text-align: left;
+	}
+	.monhoc select{
+		max-width: 120%;
+		width: 90vw;
+		margin-left: -14px;
+	}
+}
+
+
+
+
+
+
+

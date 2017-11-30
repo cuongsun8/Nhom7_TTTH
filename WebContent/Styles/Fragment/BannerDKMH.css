@@ -1,0 +1,90 @@
+#dang-ky-banner {
+    position: relative;
+    width: 90vw;
+    margin: 10px auto;
+}
+#chuongtrinhhoc {
+    position: absolute;
+    top: 48%;
+    width: 100%;
+    padding: 0 35px;
+}
+#dang-ky-banner .tieu-de {
+    font-family: Arial, Tahoma;
+    color: #fff;
+    font-size: 2em;
+    
+    margin-top: 15px;
+    margin-left: 0px;
+    line-height: 120%;
+}
+@media screen and (min-width: 680px){
+	.myRadio {
+	    padding-left: 5px;
+	}
+}
+#dang-ky-banner input[type=radio] + label {
+    display: block;
+}
+.myRadio label {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 1.5em !important;
+}
+.myRadio label span {
+    color: #ffffff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.myRadio span {
+    width: 200px;
+    height: 60px;
+    display: table-cell;
+    text-align: center;
+    padding: 6px 0;
+    cursor: pointer;
+    font-size: 0.65em;
+    font-family: Arial;
+    font-weight: normal;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+#dang-ky-banner .cthoc input[type=radio]{
+    display: none;
+}
+.myRadio span.active {
+    background-color: transparent !important;
+}
+.myRadio span:hover {
+    background-color: transparent !important;
+}
+@media(max-width: 1245px){
+	#chuongtrinhhoc{
+		top: 3%;
+	}
+	#dang-ky-banner img{
+    display: none;   
+	}
+	#chuongtrinhhoc {
+	   background-color: #804629 !important;
+	}
+}
+@media(max-width: 523px){
+	#chuongtrinhhoc{
+		padding: 10px;
+	} 
+	#dang-ky-banner .tieu-de{
+		text-align: center;
+	}
+	.cthoc{
+		width: 100%;
+	}
+	.chuongtrinh{
+		width: 70vw;
+		margin-left: 12vw !important;
+	}
+	.myRadio label span {
+	    width: 70vw;    
+	}
+}

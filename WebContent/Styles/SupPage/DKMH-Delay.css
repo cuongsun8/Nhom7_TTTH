@@ -1,0 +1,30 @@
+@media(max-width: 768px){
+	.tru-so{
+		margin-left: 20px;
+	}
+}
+.tru-so{
+	margin-bottom: 25px; 
+	font-size: 0.8em;
+}
+.tru-so span{
+	font-size: 14px;
+}
+.tru-so p{
+	margin: 22px 0 0; 
+	font-size: 1.3em;
+}
+.tru-so > img{
+	float: left; 
+	margin-right: 5px;
+}
+.delay-dk{
+	margin: 20px auto;
+}
+.cot > div > div:first-child{
+	margin-left: 20px;
+}
+.thongbao p{
+	font-size: 1.2em; 
+	margin: 10px 0;
+}

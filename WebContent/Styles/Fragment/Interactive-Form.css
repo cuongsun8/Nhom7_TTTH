@@ -1,0 +1,134 @@
+@import
+	url('https://fonts.googleapis.com/css?family=Amaranth|Changa+One|Comfortaa|Concert+One|Merriweather|Rozha+One')
+	;
+.interact-body:after{
+	content:'';
+    background: #fff;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0.5;
+    z-index: -1;
+}
+.interact {
+  width: 100%;
+  height: 100vh;
+  color: #fff !important;
+  position: fixed;
+}
+.interact .frame {
+	background: #33b5e5 linear-gradient( #61c6ea, #1dade2);
+	background-size: cover;
+	border-top: solid 1px rgba(255,255,255,.5);
+	border-radius: 5px;
+	box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+	overflow: hidden;
+	transition: all .5s ease;
+	font-family: 'Comfortaa', cursive;
+	min-width: 324px;
+	padding: 0;
+	opacity: 0; 
+ 	visibility: hidden;
+ 	transition: visibility 0.5s linear, opacity 0.5s linear; 
+ 	
+}
+.interact .nav {
+  width: 100%;
+  height: 50px;
+  padding-top: 15px;
+  opacity: 1;
+  transition: all .5s ease;
+}
+.links{
+	padding: 0;
+}
+.interact li {
+  padding-left: 5px;
+  font-size: 18px;
+  display: inline;
+  text-align: left;
+  text-transform: uppercase;
+  padding-right: 5px;
+  color: #ffffff;
+}
+.inactive a {
+  padding-bottom: 0;
+  color:  #d147a3 !important;
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer;
+}
+.active a {
+  padding-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: solid 2px #1059FF;
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+
+.form-interact {
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  transition: opacity .5s ease, transform .5s ease;
+}
+.form-interact input{
+  color: #ffffff;
+  font-size: 16px;
+}
+.form-styling {
+  width: 100%;
+  height: 35px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,.2);
+}
+.form-interact label {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #fff;
+  display: block;
+}
+:focus {
+	outline: none;
+}
+.form-interact input:focus, textarea:focus{
+    background: transparent;
+    border: solid 1px #fff; 
+    padding-right: 40px;
+    transition: background .5s ease;
+ }
+ .btn-save {
+  float: left;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  padding-top: 10px;
+  cursor: pointer;
+  width: 50%;
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 23px;
+  margin-left: 25%;
+  margin-bottom: 23px;
+  background-color: rgba(16,89,255, 1);
+}
+.subject-image{
+	margin-left:37%;
+	width: 100px;
+	height: 100px;
+}
+#image-input{
+	display: none;
+}

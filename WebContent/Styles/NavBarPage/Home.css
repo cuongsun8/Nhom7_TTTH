@@ -1,0 +1,139 @@
+.khung {
+	background: url('/TrungTamTinHoc/Assets/Images/Home/bg.jpg');
+	background-size: cover;
+}
+
+.tieu-de-thong-ke {
+	font-size: 2rem;
+}
+
+.so-lieu {
+	font-size: 3rem;
+	padding: 0;
+}
+
+.tieu-de-muc {
+	color: #FD6504;
+}
+
+.noi-dung-chinh {
+	height: 100%;
+}
+
+.canh-noi-dung {
+	padding: 0;
+	height: 15vw;
+	width: 15vw;
+	align: center;
+}
+
+.canh-noi-dung a {
+	text-decoration: none;
+	color: #fff;
+	width: 15vw;
+}
+
+.bieu-tuong {
+	width: 40%;
+	height: 40%;
+}
+
+.nganh {
+	width: 15vw;
+	text-align: center;
+}
+
+.khung .title {
+	font-size: 1.3rem;
+	position: absolute;
+	left: 0%;
+	top: 15%;
+	text-align: center;
+	width: 100%;
+}
+
+@media ( max-width : 576px) {
+	.so-lieu {
+		font-size: 2rem;
+	}
+	#padding {
+		display: none;
+	}
+}
+
+@media ( max-width : 768px) {
+	.main-div {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+@media ( max-width : 882px) {
+	.bieu-tuong {
+		display: none;
+	}
+	.khung .title {
+		top: 30%;
+		font-size: 1rem;
+	}
+	.so-lieu {
+		font-size: 2.4rem;
+	}
+}
+
+@media ( max-width : 400px) {
+	.khung .title {
+		top: 25%;
+		font-size: 0.8rem;
+	}
+	.so-lieu {
+		font-size: 2rem;
+	}
+}
+.card{					
+		margin-right: 0;
+	}
+	.card-body{
+		padding: 0;
+	}
+	.sub{
+		padding-top: 5px;
+		padding-right: 0;
+		width: 50%;
+	}
+	.sub .card{
+		width: 100%;
+	}
+	.main{
+		padding: 5px 0;
+	}
+	.main .card{
+		margin: 0;
+		height: 101%;
+	}
+	.card-body {
+		margin: 3px 4px;
+	}
+	@media (max-width: 768px){
+		.tin-tuc{
+			width: 90vw;
+			margin: 5px auto;
+		}
+		.sub .card{
+		width: 100%;
+		}
+		.sub{
+			padding:2px 2px;
+		}				
+	}
+	@media (max-width: 575px){
+		.sub .card{
+			width: 50%;
+			height: 50%;
+		}
+		.sub .card .card-body{
+			position: absolute;
+			padding-left: 45vw;
+			width: 200%;
+		}
+	}

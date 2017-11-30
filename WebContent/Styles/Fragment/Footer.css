@@ -1,0 +1,23 @@
+.tencs {
+	font-size: 15px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid;
+	margin-bottom: 3px;
+}
+
+.nhomcs {
+	color: #FFF;
+	padding-left: 0;
+	line-height: 26px
+}
+
+.footer {
+	background-color: #0077B8
+}
+.footer-text{
+	color: #FFF; 
+	font-style: italic; 
+	font-size: 14px; 
+	padding: 10px 0px;
+	margin-left: -15px;
+}
