@@ -11,7 +11,7 @@
 		<a href="dang-ky-mon-hoc"> </a>
 	</div>
 	<div class="form-parent">
-		<form name="contact-form" class="float-form">
+		<form action="feedback" method="post" name="contact-form" class="float-form" id="feedback-form">
 			<span class="tieu-de-feedback">Để lại tin nhắn</span>
 			<p></p>
 			Họ và tên:<br /> <input class="contact-form-area"
@@ -24,11 +24,11 @@
 			<p></p>
 			Nội dung: <span style="color: red;">*</span><br />
 			<textarea class="contact-form-area"
-				id="ContactForm1_contact-form-email-message" name="email-message"
+				id="ContactForm1_contact-form-email-message" name="message"
 				cols="25" rows="5"></textarea>
 			<p></p>
 			<input class="contact-form-button contact-form-button-submit"
-				id="ContactForm1_contact-form-submit" value="Gửi" type="button" />
+				id="ContactForm1_contact-form-submit" value="Gửi" type="submit" />
 			<p></p>
 			<div style="text-align: center; max-width: 222px; width: 100%">
 				<p class="contact-form-error-message"

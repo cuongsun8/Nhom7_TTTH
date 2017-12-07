@@ -1,0 +1,12 @@
+.feedback-delete {
+    visibility: hidden;
+}
+tr:hover .feedback-delete {
+    visibility: visible;
+}
+.tieu-de-muc {
+    color: #FD6504;
+}
+th{
+	text-align: center;
+}

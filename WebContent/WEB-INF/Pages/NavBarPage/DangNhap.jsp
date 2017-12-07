@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Đăng nhập</title>
 <jsp:include page="/WEB-INF/Fragment/LibImport.jsp" />
 <link rel="stylesheet" href="/TrungTamTinHoc/Styles/NavBarPage/SignIn.css">
-<script src="/TrungTamTinHoc/Scripts/SignIn-Validate.js"></script>
+<script src="/TrungTamTinHoc/Scripts/NavBarPage/DangNhap-validate.js"></script>
 <script>
 	$(document).ready(function(){	
 		$('[data-toggle="popover"]').popover();

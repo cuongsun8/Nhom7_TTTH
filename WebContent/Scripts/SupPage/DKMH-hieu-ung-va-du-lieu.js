@@ -108,6 +108,7 @@ function displayChonLich(){
 				$.each(array, function(i, item){
 					var div = $('<div>').appendTo('.tkb');
 					div.addClass("col-sm-6 col-12 lblLich mb-4");
+					div.attr('id', array[i].MaLichHoc);
 					
 					var label = $('<label>').appendTo(div);
 					

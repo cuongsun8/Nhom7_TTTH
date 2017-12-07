@@ -5,7 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <sql:setDataSource var="db" driver="com.mysql.jdbc.Driver"
 	url="jdbc:mysql://localhost:3306/trungtamtinhoc" user="root"
-	password="123" />
+	password="123456789" />
 <sql:query var="result" dataSource="${db}">Select * from educate_programs</sql:query>
 <json:object>
 	<json:array name="CTDT" var="row" items="${result.rows}">

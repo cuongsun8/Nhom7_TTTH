@@ -3,6 +3,10 @@
         max-width: 100%;
     }
 }
+.header{
+	position: relative;
+	z-index: 2;
+}
 .none-box-shadow:focus, .none-box-shadow:active {
     box-shadow: none;
 }

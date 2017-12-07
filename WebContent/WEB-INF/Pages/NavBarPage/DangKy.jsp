@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Đăng ký</title>
 <jsp:include page="/WEB-INF/Fragment/LibImport.jsp" />
 <link rel="stylesheet" href="/TrungTamTinHoc/Styles/NavBarPage/SignUp.css">
-<script src="/TrungTamTinHoc/Scripts/SignUp-validate.js"></script>
+<script src="/TrungTamTinHoc/Scripts/NavBarPage/DangKy-validate.js"></script>
 <script>
 $(document).ready(function(){	
 	$('[data-toggle="popover"]').popover();

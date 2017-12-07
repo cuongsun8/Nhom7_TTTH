@@ -10,34 +10,47 @@ $(document).ready(function() {
 		noteInput = $('#ghichu')[0];
 		
 		validator.validate(hotenInput, emailInput, sdtInput, noteInput);
-		
 		if(!validator.isValid()) {
 			hotenInput.setAttribute('data-content', validator.hotenErr);
 			emailInput.setAttribute('data-content', validator.emailErr);
 			sdtInput.setAttribute('data-content', validator.sdtErr);
 			noteInput.setAttribute('data-content', validator.noteErr);
+			$('#hoten, #email, #dienthoai, #ghichu').popover('show');
+			event.preventDefault();
+		}else{
+			var flag = true;
+			
 			var s = $('#doituong')[0].selectedIndex;
 			if($('#doituong')[0].selectedIndex == 0){
-				$('#doituong')[0].setAttribute('data-content', 'Bạn chưa chọn đối tượng');				
+				$('#doituong')[0].setAttribute('data-content', 'Bạn chưa chọn đối tượng');
+				$('#cboMonHoc').popover('show');
+				flag = false;
 			}
 			else{
 				$('#doituong')[0].setAttribute('data-content', '');		
 			}
 			
 			if($('#cboMonHoc')[0].selectedIndex == 0){
-				$('#cboMonHoc')[0].setAttribute('data-content', 'Bạn chưa chọn môn học');	
+				$('#cboMonHoc')[0].setAttribute('data-content', 'Bạn chưa chọn môn học');
+				$('#doituong').popover('show');
+				flag = false;
 			}
 			else{
 				$('#cboMonHoc')[0].setAttribute('data-content', '');		
 			}
 			
-			$('#hoten, #email, #dienthoai, #doituong, #ghichu, #cboMonHoc').popover('show');
 			if(!$('.lblLich').hasClass('lich-check')){
 				alert("Bạn chưa chon lịch học!");
+				flag = false;
+				event.preventDefault();
 			};
-			
-			event.preventDefault();
-		}	
+			if(flag){
+				$('#doituong2').val($('#doituong :selected').text());
+				$('#maMH').val($('#cboMonHoc :selected').attr('id'));
+				$('#maLichHoc').val($('.lich-check').attr('id'));
+				$('#DKMH').submit();
+			}
+		}
 		
 	});
 	

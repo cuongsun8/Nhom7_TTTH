@@ -154,6 +154,22 @@
 						</li>
 						<li class="nav-item menu-title"><a href="/TrungTamTinHoc/lien-he" class="nav-link">Liên hệ</a>
 						</li>
+						
+						<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+						<c:if test="${sessionScope.capdo == '2'}">
+						    <li class="nav-item menu-title dich-vu"><a href="#" class="nav-link">Tác vụ</a>
+							<div class="dichvu-menu">
+								<ul class="link-list mt-2">
+									<li><a class="ml-3" href="/TrungTamTinHoc/admin/add-news"><i class="fa fa-newspaper-o"></i> Thêm tin tức</a></li>
+									<li><a class="ml-3" href="/TrungTamTinHoc/admin/cap-nhat-tin-tuc"><i class="fa fa-file-text-o"></i>  Chỉnh sửa tin tức</a></li>
+									<li><a class="ml-3" href="/TrungTamTinHoc/admin/them-lop"><i class="fa fa-users"></i> Thêm lớp</a></li>
+									<li><a class="ml-3" href="/TrungTamTinHoc/admin/thong-ke-dang-ky"><i class="fa fa-university"></i> Thống kê đăng ký</a></li>
+									<li><a class="ml-3" href="/TrungTamTinHoc/feedback"><i class="fa fa-commenting-o"></i> Xem phản hồi</a></li>
+								</ul>
+							</div>
+						</li>
+						</c:if>
+						
 						<li class="nav-item menu-title dang-nhap"><a href="/TrungTamTinHoc/dang-nhap" class="nav-link">Đăng nhập</a>
 						</li>
 					</ul>

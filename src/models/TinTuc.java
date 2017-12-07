@@ -6,13 +6,17 @@ public class TinTuc {
 	String url;
 	String image;
 	String content;
-	public TinTuc(String chude, String tieude, String url, String image, String content) {
+	String discription;
+	
+	
+	public TinTuc(String chude, String tieude, String url, String image, String content, String discription) {
 		super();
 		this.chude = chude;
 		this.tieude = tieude;
 		this.url = url;
 		this.image = image;
 		this.content = content;
+		this.discription = discription;
 	}
 	public TinTuc() {
 		
@@ -48,6 +52,11 @@ public class TinTuc {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	
+	public String getDiscription() {
+		return discription;
+	}
+	public void setDiscription(String discription) {
+		this.discription = discription;
+	}
 	
 }

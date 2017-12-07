@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <div id="carouselExampleIndicators" class="carousel slide mt-1 mx-auto"
-	data-ride="carousel" style="width: 90vw; z-inex=-1;">
+	data-ride="carousel" style="width: 90vw; z-inex=-1;  max-width: 1200px;">
 	<ol class="carousel-indicators">
 		<li data-target="#carouselExampleIndicators" data-slide-to="0"
 			class="active"></li>

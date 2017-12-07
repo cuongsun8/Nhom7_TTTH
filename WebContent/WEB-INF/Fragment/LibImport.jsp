@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<meta charset="UTF-8">
 <link rel="shortcut icon" href="/TrungTamTinHoc/Assets/Images/favicon.png" type="image/x-icon" />
 <link rel="stylesheet" href="/TrungTamTinHoc/Assets/bootstrap/bootstrap.min.css">
 <script src="/TrungTamTinHoc/Assets/bootstrap/popper.min.js"></script>

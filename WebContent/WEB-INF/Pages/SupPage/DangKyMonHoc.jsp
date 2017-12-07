@@ -14,6 +14,28 @@
 <script src="/TrungTamTinHoc/Scripts/jquery.tmpl.min.js" type="text/javascript"></script>
 <script type="text/javascript" src = "/TrungTamTinHoc/Scripts/SupPage/DKMH-hieu-ung-va-du-lieu.js">
 </script>
+<script type="text/javascript">
+$(document).ready(function(){
+	if(${registerCheck == 0} && ${isChecked != null}){
+		$('#hoten').val('${returnHoten}');
+		$('#email').val('${returnEmail}');
+		$('#dienthoai').val('${returnSdt}');
+		$("#doituong option").filter(function() {
+		    return this.text == "${returnDoituong}"; 
+		}).attr('selected', true);
+		$('#ghichu').val('${returnGhichu}');
+	}
+	setTimeout(function(){
+		if(${message != null}){
+			alert('${message}');
+		}else{
+			if(${isChecked != null}){
+				alert("Bạn đã đăng ký lớp học này!");
+			}
+		}
+	});
+});
+</script>
 </head>
 <body>	
 	<jsp:include page="/WEB-INF/Fragment/Header.jsp"/>
@@ -63,6 +85,7 @@
 			<div class="row mg10">
 				<h2 class="tieu-de">Thông tin cá nhân</h2>
 			</div>
+			<form action="dang-ky-mon-hoc" method="post" id="DKMH">
 			<div class="row mg10">
 				<div class="col-lg-1 col-md-0"></div>
 				<div class="col-lg-6 col-md-7 form-horizontal form-feild">
@@ -154,6 +177,10 @@
 							đăng ký</span>
 				</div>
 			</div>
+			<input class="fade" type="text" id="doituong2" name="doituong">
+			<input class="fade" type="text" id="maMH" name="maMH">
+			<input class="fade" type="text" id="maLichHoc" name="maLichHoc">
+			</form>
 		</div>
 	</div>
 	<jsp:include page="/WEB-INF/Fragment/Footer.jsp" />

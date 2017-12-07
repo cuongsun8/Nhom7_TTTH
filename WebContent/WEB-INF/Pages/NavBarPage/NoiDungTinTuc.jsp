@@ -1,14 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
+ <sql:setDataSource var="db" driver="com.mysql.jdbc.Driver"
+url="jdbc:mysql://localhost:3306/trungtamtinhoc" user="root"
+password="123456789" />
+<sql:query var="news" dataSource="${db}" maxRows="4">select * from news</sql:query>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <jsp:include page="/WEB-INF/Fragment/LibImport.jsp"/>
 <script>
 $(document).ready(function(){
-	$('#data-container').append('${content}');
+	$('#data-container').empty();
+	$('#data-container').append(`${content}`);
 	$('#data-container img').removeAttr("style");
 	$('#data-container img').attr('style', 
 			`height:auto;
@@ -54,46 +61,18 @@ $(document).ready(function(){
 			</h3>
 			<hr>
 			<div class="row">
+			<c:forEach items="${news.rows}" var="tintuc">
 				<div class="col-md-3 col-sm-6 col-12 sub">
 					<div class="card">
-						<img class="card-img-top" src="/TrungTamTinHoc/Assets/Images/TinTuc/1.png" title="10 cách thiết kế nội dung hấp dẫn">
+						<img class="card-img-top" src="${tintuc.Image}" title="${tintuc.TuaDe}">
 						<div class="card-body">
-							<a href="#">[<span>Infographic</span>] 10 cách thiết kế
-								nội dung hấp dẫn
+							<a href="${tintuc.Url}">[${tintuc.ChuDe}]
+								${tintuc.TuaDe}
 							</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 col-12 sub">
-					<div class="card">
-						<img class="card-img-top" src="/TrungTamTinHoc/Assets/Images/TinTuc/2.png" title="10 năm liên tục là đơn vị đào tọa CNTT xuất sắc">
-						<div class="card-body">
-							<a href="#">[<span>Tiêu điểm</span>] 10 năm liên tục là
-								đơn vị đào tọa CNTT xuất sắc
-							</a>
-						</div>
-					</div>
-				</div>						
-				<div class="col-md-3 col-sm-6 col-12 sub">
-					<div class="card">
-						<img class="card-img-top" src="/TrungTamTinHoc/Assets/Images/TinTuc/3.png" title="21 công cụ miễn phí cho thiết kế đồ họa">
-						<div class="card-body">
-							<a href="#">[<span>Infographic</span>] 21 công cụ miễn phí
-								cho thiết kế đồ họa
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-12 sub">
-					<div class="card">
-						<img class="card-img-top" src="/TrungTamTinHoc/Assets/Images/TinTuc/4.png" title="Workshop thiết kế, sáng tạo Web">
-						<div class="card-body">
-							<a href="#">[<span>Miễn phí</span>] Workshop thiết kế,
-								sáng tạo Web
-							</a>
-						</div>
-					</div>
-				</div>
+			</c:forEach>
 			</div>
 		</div>
 </div>

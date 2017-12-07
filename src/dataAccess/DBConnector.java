@@ -7,10 +7,10 @@ public class DBConnector {
 
 	// Driver and URL
 	private static final String DRIVER_JDBC = "com.mysql.jdbc.Driver";
-	private static final String URL_DB = "jdbc:mysql://localhost/trungtamtinhoc";
+	private static final String URL_DB = "jdbc:mysql://localhost/trungtamtinhoc?useUnicode=true&characterEncoding=utf-8";
 	// Pass and User
 	private static final String USER = "root";
-	private static final String PASS = "123";
+	private static final String PASS = "123456789";
 
 	private static Connection conn;
 

@@ -1,9 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
+<sql:setDataSource var="db" driver="com.mysql.jdbc.Driver"
+	url="jdbc:mysql://localhost:3306/trungtamtinhoc" user="root"
+	password="123456789" />
+<sql:query var="news" dataSource="${db}" maxRows="5">select * from news</sql:query>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <jsp:include page="/WEB-INF/Fragment/LibImport.jsp"/>
 <link rel="stylesheet" href="/TrungTamTinHoc/Styles/Fragment/Map.css">
@@ -59,17 +65,23 @@
 				<div class="col-sm-1"></div>
 				<div class="row my-5 main-div">
 					<div class="col-sm-1"></div>
+					<c:forEach var="item" items="${ctdt}" varStatus="loop">
 					<div class="col-6 col-sm-2 canh-noi-dung"
-						style="background-color: #706D3C;">
-						<a href="do-hoa-da-truyen-thong"> <span class="nganh">
-								<span class="title">Đồ hoạ đa truyền thông<br> <img
-									src="/TrungTamTinHoc/Assets/Images/Home/Do_hoa_da_truyen_thong.png"
-									class="bieu-tuong mx-auto">
+						style="background-color: ${color[loop.index]};">
+						<a href="${item.url}"> <span class="nganh">
+								<span class="title">${item.tenCTDT}<br> <img
+									src="${item.image}"
+									class="bieu-tuong">
 							</span>
 						</span>
-						</a>
+						</a>					
 					</div>
-					<div class="col-6 col-sm-2 canh-noi-dung"
+					<c:if test="${loop.index == 4 }">
+							<div class="col-sm-1" id="padding"></div>
+							<div class="col-sm-1" id="padding"></div>
+						</c:if>
+					</c:forEach>
+					<!-- <div class="col-6 col-sm-2 canh-noi-dung"
 						style="background-color: #E65527;">
 						<a href="thiet-ke-website"> <span class="nganh"> <span
 								class="title">Thiết kế website<br> <img
@@ -160,7 +172,7 @@
 							</span>
 						</span>
 						</a>
-					</div>
+					</div> -->
 					<div class="col-sm-1"></div>
 				</div>
 			</div>
@@ -171,18 +183,13 @@
 		<h1 class="tieu-de-muc mt-3">Tin tức sự kiện</h1>
 		<img src="/TrungTamTinHoc/Assets/Images/ngoisao_cam.png" width="250px">
 	</div>
-
-	<div class="row tin-tuc">
-		<div class="col-lg-1 col-md-1 col-sm-0 col-0"></div>
+	<div class="row tin-tuc justify-content-center">
 		<div class="col-lg-5 col-md-5 col-sm-12 col-12 main">
 			<div class="card">
-				<img class="card-img-top" src="/TrungTamTinHoc/Assets/Images/TinTuc/main.png">
+				<img class="card-img-top" src="${news.rows[0].Image}">
 				<div class="card-body">
-					<a href="#">[<span>Thiết kế đồ họa</span>] Phân biệt các kiểu
-						thiết kế Logo
-					</a> <br>
-					<p class="card-text">Tùy theo lĩnh vực hoạt động và nhu cầu sử
-						dụng có thể phân ra 5 kiểu thiết kế Logo phổ biến hiện nay.</p>
+					<a href="tin-tuc/${news.rows[0].Url}">[${news.rows[0].ChuDe}] ${news.rows[0].TuaDe} </a> <br>
+					<p class="card-text">${news.rows[0].Description}</p>
 				</div>
 			</div>
 		</div>
@@ -190,21 +197,17 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-12 sub">
 					<div class="card">
-						<img class="card-img-top" src="/TrungTamTinHoc/Assets/Images/TinTuc/1.png">
+						<img class="card-img-top" src="${news.rows[1].Image}">
 						<div class="card-body">
-							<a href="#">[<span>Infographic</span>] 10 cách thiết kế nội
-								dung hấp dẫn
-							</a>
+							<a href="tin-tuc/${news.rows[1].Url}">[${news.rows[1].ChuDe}] ${news.rows[1].TuaDe} </a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-12 sub">
 					<div class="card">
-						<img class="card-img-top" src="/TrungTamTinHoc/Assets/Images/TinTuc/2.png">
+						<img class="card-img-top" src="${news.rows[2].Image}">
 						<div class="card-body">
-							<a href="#">[<span>Tiêu điểm</span>] 10 năm liên tục là đơn
-								vị đào tọa CNTT xuất sắc
-							</a>
+							<a href="tin-tuc/${news.rows[2].Url}">[${news.rows[2].ChuDe}] ${news.rows[2].TuaDe} </a>
 						</div>
 					</div>
 				</div>
@@ -212,27 +215,22 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-12 sub">
 					<div class="card">
-						<img class="card-img-top" src="/TrungTamTinHoc/Assets/Images/TinTuc/3.png">
+						<img class="card-img-top" src="${news.rows[3].Image}">
 						<div class="card-body">
-							<a href="#">[<span>Infographic</span>] 21 công cụ miễn phí
-								cho thiết kế đồ họa
-							</a>
+							<a href="tin-tuc/${news.rows[3].Url}">[${news.rows[3].ChuDe}] ${news.rows[3].TuaDe} </a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6 col-12 sub">
 					<div class="card">
-						<img class="card-img-top" src="/TrungTamTinHoc/Assets/Images/TinTuc/4.png">
+						<img class="card-img-top" src="${news.rows[4].Image}">
 						<div class="card-body">
-							<a href="#">[<span>Miễn phí</span>] Workshop thiết kế, sáng
-								tạo Web
-							</a>
+							<a href="tin-tuc/${news.rows[4].Url}">[${news.rows[4].ChuDe}] ${news.rows[4].TuaDe} </a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-1 col-md-1 col-sm-0 col-0"></div>
 	</div>
 
 	<div id="lien-he" class="container" style="text-align: center">

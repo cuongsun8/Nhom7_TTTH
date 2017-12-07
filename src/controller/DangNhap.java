@@ -53,7 +53,7 @@ public class DangNhap extends HttpServlet {
 			rd.forward(request, response);
 		}
 		else{
-		String sql = "Select Password from accounts where UserName = '" +
+		String sql = "Select Password, Level from accounts where UserName = '" +
 		request.getParameter("username") + "' or Email = '" + 
 				request.getParameter("username") + "'";	
 		try {
@@ -64,11 +64,14 @@ public class DangNhap extends HttpServlet {
 			stmt = conn.prepareStatement(sql);
 			rs = stmt.executeQuery();
 			String pass = "";
+			@SuppressWarnings("unused")
+			int capDo=1;
 			request.setAttribute("usernameCheck", 0);
 			request.setAttribute("passwordCheck", 0);
 			while(rs.next()) {
 				request.setAttribute("usernameCheck", 1);
 				pass = rs.getString("Password");
+				capDo = rs.getInt("Level");
 			}
 			if(pass != "") {			
 				String inputPass = request.getParameter("password").toString();
@@ -77,6 +80,7 @@ public class DangNhap extends HttpServlet {
 					
 					
 					session.setAttribute("user", request.getParameter("username"));
+					session.setAttribute("capdo", capDo);
 					
 					response.sendRedirect("/TrungTamTinHoc/trang-chu");
 				}

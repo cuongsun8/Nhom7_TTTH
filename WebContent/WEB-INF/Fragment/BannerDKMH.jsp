@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<div id="dang-ky-banner" class="container row">
+<div id="dang-ky-banner" class="container row mx-auto">
 	<img class="img-responsive" style="width: 100%; height: 100%"
 		src="/TrungTamTinHoc/Assets/Images/DKMH/banner-dang-ky.jpg" alt="">
 	<div id="chuongtrinhhoc" class="row">
